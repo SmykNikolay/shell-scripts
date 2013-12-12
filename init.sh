@@ -1,5 +1,3 @@
-#!/bin/bash
-
 for i in {1..22375}
 do
     # Generate random content
@@ -25,6 +23,11 @@ do
 
     # Commit changes with the random date
     GIT_AUTHOR_DATE="$random_date" GIT_COMMITTER_DATE="$random_date" git commit -m "Commit all changes"
+
+    # If i is a multiple of 1000, push changes to the repository
+    if (( i % 1000 == 0 )); then
+        git push
+    fi
 
     echo "Script created and changes committed successfully!"
     echo "Random content: $random_content"
