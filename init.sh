@@ -19,7 +19,7 @@ do
     git add .
 
     # Generate a random date between 2012-01-01 and 2024-04-05
-    random_date=$(date -v +$(( RANDOM % 4475 + 1))d -j -f "%Y-%m-%d" "2012-01-01" "+%Y-%m-%dT%H:%M:%S")
+    random_date=$(date -v +$(( RANDOM % 4485 + 1))d -j -f "%Y-%m-%d" "2012-01-01" "+%Y-%m-%dT%H:%M:%S")
 
     # Commit changes with the random date
     GIT_AUTHOR_DATE="$random_date" GIT_COMMITTER_DATE="$random_date" git commit -m "Commit all changes"
