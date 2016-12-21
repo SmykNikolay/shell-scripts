@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..512}
+for i in {1..5120}
 do
     # Generate random content
     random_content=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
