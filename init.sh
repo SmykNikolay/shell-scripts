@@ -6,6 +6,7 @@ do
     random_content=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
 
     # Create the file with a unique name
+    i=$((i * (RANDOM % 4475 + 1)))
     file_name="random_script_$i.sh"
     touch "$file_name"
 
