@@ -24,3 +24,5 @@ random_date=$(date -v +$(( RANDOM % 4475 + 1))d -j -f "%Y-%m-%d" "2012-01-01" "+
 GIT_AUTHOR_DATE="$random_date" GIT_COMMITTER_DATE="$random_date" git commit -m "Commit all changes"
 
 echo "Script created and changes committed successfully!"
+echo "Random content: $random_content"
+echo "Commit date: $random_date"
