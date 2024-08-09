@@ -1,4 +1,4 @@
-for i in {1..22375}; do
+for i in {1..40}; do
   # Generate random content
   random_content=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
 
@@ -17,7 +17,7 @@ for i in {1..22375}; do
   git add .
   days=$((($(date +%s) - $(date -j -f "%Y-%m-%d" "2024-06-22" "+%s")) / 86400))
 
-  random_date=$(date -v +$((RANDOM % days + 1))d -j -f "%Y-%m-%d" "2024-06-22" "+%Y-%m-%dT%H:%M:%S")
+  random_date=$(date -v +$((RANDOM % days + 1))d -j -f "%Y-%m-%d" "2024-08-07" "+%Y-%m-%dT%H:%M:%S")
 
   # Commit changes with the random date
   GIT_AUTHOR_DATE="$random_date" GIT_COMMITTER_DATE="$random_date" git commit -m "Commit all changes"
