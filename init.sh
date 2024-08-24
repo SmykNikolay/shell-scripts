@@ -15,7 +15,7 @@ for i in {1..40}; do
   chmod +x "$file_name"
 
   git add .
-  days=$((($(date +%s) - $(date -j -f "%Y-%m-%d" "2024-06-22" "+%s")) / 86400))
+  days=$((($(date +%s) - $(date -j -f "%Y-%m-%d" "2024-06-25" "+%s")) / 86400))
 
   random_date=$(date -v +$((RANDOM % days + 1))d -j -f "%Y-%m-%d" "2024-08-07" "+%Y-%m-%dT%H:%M:%S")
 
